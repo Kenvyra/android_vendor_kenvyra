@@ -83,6 +83,9 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/kenvyra/config/lineage_sdk_common.mk
 endif
 
+# Include font files
+include vendor/kenvyra/config/fonts.mk
+
 # Flatten APEXs for performance
 OVERRIDE_TARGET_FLATTEN_APEX := true
 # This needs to be specified explicitly to override ro.apex.updatable=true from
