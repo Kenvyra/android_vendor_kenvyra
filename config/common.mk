@@ -111,10 +111,7 @@ $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(KENVYRA_BUI
 endif
 
 # Bootanimation
-TARGET_SCREEN_WIDTH ?= 1080
-TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+$(call inherit-product, vendor/kenvyra/config/bootanimation.mk)
 
 # Build Manifest
 PRODUCT_PACKAGES += \
