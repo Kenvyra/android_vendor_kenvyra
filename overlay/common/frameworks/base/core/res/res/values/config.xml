@@ -182,4 +182,7 @@
 
     <!-- IP address of the dns server to use if nobody else suggests one -->
     <string name="config_default_dns_server" translatable="false">1.1.1.1</string>
+
+    <!-- Remote server that can provide NTP responses. -->
+    <string name="config_ntpServer" translatable="false">2.android.pool.ntp.org</string>
 </resources>
