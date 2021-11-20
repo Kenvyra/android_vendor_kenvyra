@@ -83,6 +83,12 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/kenvyra/config/lineage_sdk_common.mk
 endif
 
+# Gboard
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.bs_theme=true \
+    ro.com.google.ime.theme_id=5 \
+    ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms
+
 # Include font files
 include vendor/kenvyra/config/fonts.mk
 
