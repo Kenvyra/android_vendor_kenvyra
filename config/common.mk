@@ -83,6 +83,9 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/kenvyra/config/lineage_sdk_common.mk
 endif
 
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
