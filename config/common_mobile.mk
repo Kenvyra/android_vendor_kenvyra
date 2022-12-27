@@ -18,6 +18,18 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly
 
+# microG
+ifeq ($(KENVYRA_MICROG), true)
+    PRODUCT_PACKAGES += \
+        DejaVuLocationService \
+        FakeStore \
+        F-Droid \
+        GmsCore \
+        GsfProxy \
+        MozillaNlpBackend \
+        NominatimNlpBackend
+endif
+
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
     TrebuchetQuickStepGo
