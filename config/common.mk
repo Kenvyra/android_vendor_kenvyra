@@ -228,4 +228,3 @@ include vendor/kenvyra/config/version.mk
 -include vendor/kenvyra-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/kenvyra/config/partner_gms.mk
