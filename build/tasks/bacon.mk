@@ -14,14 +14,37 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# Kenvyra OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+KENVYRA_TARGET_PACKAGE := $(PRODUCT_OUT)/Kenvyra-$(KENVYRA_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
-	$(hide) $(SHA256) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).sha256sum
-	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(KENVYRA_TARGET_PACKAGE)
+	$(hide) $(SHA256) $(KENVYRA_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(KENVYRA_TARGET_PACKAGE).sha256sum
+	echo -e "========================================="
+	echo -e ""
+	echo -e "                    ."
+	echo -e "               .o\$$*°    .o*   d"
+	echo -e "           .o\$$\$$\$$\$$     o\$$P    d\$$"
+	echo -e "         o\$$*dP\$$\$$P    d**\$$o.  \$$b d"
+	echo -e "       d\$$° \$$Pd\$$\$$b  °?\$$\$$\$$\$$*°*\$$\$$\$$d\$$"
+	echo -e "      \$$P  dP \$$\$$°\$$   d\$$\$$\$$ d\$$o.\$$\$$?\$$ob"
+	echo -e "     d\$$   db.\$$b  \$$. d\$$\$$\$$bd\$$***\$$\$$\$$\$$\$$"
+	echo -e "     \$$P   ?\$$\$$ °\$$. ?\$$\$$°\$$\$$\$$\$$\$$bo. *\$$\$$\$$b"
+	echo -e "     ?b   d*\$$.  *oo\$$°?o\$$b°?.*\$$\$$o?\$$\$$\$$"
+	echo -e "      \$$.o*  °\$$b  d\$$o   *\$$o \$$*o?b\$$ \$$"
+	echo -e "       \$$b     °\$$dP  ?    \$$**b ? \$$?"
+	echo -e "        *\$$o   o*°\$$.      ?b P°?b bb"
+	echo -e "          °\$$od°   ?b      \$$    \$$?\$$"
+	echo -e "            °?o    P      *    P \$$"
+	echo -e "              °\$$.         P      d"
+	echo -e "                ?"
+	echo -e ""
+	echo -e "                Kenvyra"
+	echo -e ""
+	echo -e "========================================="
+	echo -e ""
+	@echo "Package Complete: $(KENVYRA_TARGET_PACKAGE)"
