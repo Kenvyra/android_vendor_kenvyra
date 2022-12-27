@@ -23,6 +23,18 @@ PRODUCT_PACKAGES += \
     Profiles \
     Seedvault
 
+# microG
+ifeq ($(KENVYRA_MICROG), true)
+    PRODUCT_PACKAGES += \
+        DejaVuLocationService \
+        FakeStore \
+        F-Droid \
+        GmsCore \
+        GsfProxy \
+        MozillaNlpBackend \
+        NominatimNlpBackend
+endif
+
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
     AudioFX
