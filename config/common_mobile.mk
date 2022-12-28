@@ -29,6 +29,11 @@ ifeq ($(KENVYRA_MICROG), true)
         NominatimNlpBackend
 endif
 
+# GApps
+ifeq ($(KENVYRA_GAPPS), true)
+    $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+endif
+
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
     TrebuchetQuickStepGo
