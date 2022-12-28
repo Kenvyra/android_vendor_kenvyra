@@ -34,6 +34,11 @@ ifeq ($(KENVYRA_MICROG), true)
         NominatimNlpBackend
 endif
 
+# GApps
+ifeq ($(KENVYRA_GAPPS), true)
+    $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+endif
+
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
     AudioFX
