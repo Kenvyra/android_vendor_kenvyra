@@ -10,8 +10,7 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.kenvyra.releasetype=$(KENVYRA_BUILDTYPE) \
     ro.kenvyra.ziptype=$(KENVYRA_BUILD_ZIP_TYPE) \
     ro.kenvyra.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(KENVYRA_VERSION) \
-    ro.kenvyralegal.url=https://lineageos.org/legal
+    ro.modversion=$(KENVYRA_VERSION)
 
 # Kenvyra Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
