@@ -14,7 +14,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    Backgrounds \
     ExactCalculator
 
 # microG
