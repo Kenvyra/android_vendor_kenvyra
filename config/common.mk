@@ -124,8 +124,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
-    LineageSetupWizard \
     Updater
+
+# Kenvyra packages
+PRODUCT_PACKAGES += \
+    KenvyraSetupWizard
 
 PRODUCT_COPY_FILES += \
     vendor/kenvyra/prebuilt/common/etc/init/init.lineage-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-updater.rc
