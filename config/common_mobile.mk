@@ -35,20 +35,20 @@ endif
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
-    TrebuchetQuickStepGo
+    KenvyraLauncherGo
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStepGo
+    KenvyraLauncherGo
 else
 PRODUCT_PACKAGES += \
-    TrebuchetQuickStep
+    KenvyraLauncher
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStep
+    KenvyraLauncher
 endif
 
 PRODUCT_PACKAGES += \
-    TrebuchetOverlay
+    KenvyraLauncherOverlay
 
 # Charger
 PRODUCT_PACKAGES += \
