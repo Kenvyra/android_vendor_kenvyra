@@ -195,8 +195,13 @@
     <!-- Remote server that can provide NTP responses. -->
     <string name="config_ntpServer" translatable="false">2.android.pool.ntp.org</string>
 
-    <!-- Build fingerprint from a GMS certified device -->
-    <string name="config_certifiedFingerprint" translatable="false">google/angler/angler:6.0/MDB08L/2343525:user/release-keys</string>
+    <!-- Build properties from a GMS certified device against current platform SPL level -->
+    <string-array name="config_certifiedBuildProperties" translatable="false">
+        <item>marlin</item>   <!-- Build.DEVICE -->
+        <item>marlin</item>   <!-- Build.PRODUCT -->
+        <item>Pixel XL</item> <!-- Build.MODEL -->
+        <item>google/marlin/marlin:7.1.2/NJH47F/4146041:user/release-keys</item> <!-- Build.FINGERPRINT -->
+    </string-array>
 
     <!-- Whether to spoof device as pixel for certain google apps, to
          unlock pixel-exclusive features -->
