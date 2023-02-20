@@ -26,11 +26,13 @@ ifeq ($(KENVYRA_MICROG), true)
         GsfProxy \
         MozillaNlpBackend \
         NominatimNlpBackend
-endif
-
 # GApps
-ifeq ($(KENVYRA_GAPPS), true)
+else ifeq ($(KENVYRA_GAPPS), true)
     $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+# Vanilla
+else
+    PRODUCT_PACKAGES += \
+        GmsCompat
 endif
 
 ifeq ($(PRODUCT_TYPE), go)
