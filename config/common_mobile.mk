@@ -34,6 +34,7 @@ ifeq ($(KENVYRA_MICROG), true)
 # GApps
 else ifeq ($(KENVYRA_GAPPS), true)
     $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+    $(call inherit-product-if-exists, vendor/extra/pixel-framework/config.mk)
 # Vanilla
 else
     PRODUCT_PACKAGES += \
