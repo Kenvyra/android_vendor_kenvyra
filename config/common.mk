@@ -83,6 +83,16 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/kenvyra/config/lineage_sdk_common.mk
 endif
 
+# Blur
+ifeq ($(TARGET_ENABLE_BLUR), true)
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+else
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
+endif
+
 # Include font files
 include vendor/kenvyra/config/fonts.mk
 
