@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     Aperture \
     Eleven \
     Etar \
-    ExactCalculator \
+    OpenCalc \
     Profiles \
     Seedvault
 
