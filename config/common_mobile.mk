@@ -14,7 +14,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    ExactCalculator
+    OpenCalc
 
 # microG
 ifeq ($(KENVYRA_MICROG), true)
