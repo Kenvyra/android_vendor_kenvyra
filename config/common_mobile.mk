@@ -21,13 +21,10 @@ PRODUCT_PACKAGES += \
 # microG
 ifeq ($(KENVYRA_MICROG), true)
     PRODUCT_PACKAGES += \
-        DejaVuLocationService \
         FakeStore \
         F-Droid \
         GmsCoreMicrog \
-        GsfProxy \
-        MozillaNlpBackend \
-        NominatimNlpBackend
+        GsfProxy
 # GApps
 else ifeq ($(KENVYRA_GAPPS), true)
     $(call inherit-product, vendor/google/gms/config.mk)
