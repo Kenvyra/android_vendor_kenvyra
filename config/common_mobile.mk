@@ -22,14 +22,15 @@ ifeq ($(KENVYRA_MICROG), true)
         DejaVuLocationService \
         FakeStore \
         F-Droid \
-        GmsCore \
+        GmsCoreMicrog \
         GsfProxy \
         MozillaNlpBackend \
         NominatimNlpBackend
 # GApps
 else ifeq ($(KENVYRA_GAPPS), true)
-    $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
-    $(call inherit-product-if-exists, vendor/extra/pixel-framework/config.mk)
+    $(call inherit-product, vendor/google/gms/config.mk)
+    $(call inherit-product, vendor/google/pixel/config.mk)
+    $(call inherit-product, vendor/extra/pixel-framework/config.mk)
 # Vanilla
 else
     PRODUCT_PACKAGES += \
