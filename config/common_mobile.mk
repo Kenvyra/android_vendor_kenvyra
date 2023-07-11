@@ -8,9 +8,11 @@ include vendor/kenvyra/config/aosp_audio.mk
 include vendor/kenvyra/config/lineage_audio.mk
 
 # Default notification/alarm sounds
+ifneq ($(KENVYRA_GAPPS), true)
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
+endif
 
 # Apps
 PRODUCT_PACKAGES += \
