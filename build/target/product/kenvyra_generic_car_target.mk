@@ -12,7 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/kenvyra/config/common_car.mk)
+
+EMULATOR_VENDOR_NO_SENSORS := true
+EMULATOR_VENDOR_NO_SOUND := true
 
 # Allow building otatools
 TARGET_FORCE_OTA_PACKAGE := true
